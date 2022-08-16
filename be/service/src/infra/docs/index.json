@@ -1,0 +1,921 @@
+{
+  "name": "CRS",
+  "classes": [
+    {
+      "className": "User",
+      "attributes": {
+        "self.user_id": "",
+        "self.user_type": "",
+        "self.props": ""
+      },
+      "methods": [
+        {
+          "name": "SingIn",
+          "method": "POST",
+          "doc": "SingIn Documentation",
+          "inputs": ["username", "password"]
+        },
+        {
+          "name": "SingUp",
+          "method": "POST",
+          "doc": "SingUp Documentation",
+          "inputs": ["username", "password"]
+        },
+        {
+          "name": "Reset",
+          "method": "POST",
+          "doc": "Reset Documentation",
+          "inputs": ["username"]
+        },
+        {
+          "name": "Forgot",
+          "method": "POST",
+          "doc": "Forgot Documentation",
+          "inputs": ["email"]
+        },
+        {
+          "name": "ListPermission",
+          "method": "POST",
+          "doc": "ListPermission Documentation",
+          "inputs": ["email"]
+        },
+        {
+          "name": "ListMenu",
+          "method": "POST",
+          "doc": "ListMenu Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ListParam",
+          "method": "POST",
+          "doc": "ListParam Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "EditProfile",
+          "method": "POST",
+          "doc": "EditProfile Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ListAllAlert",
+          "method": "POST",
+          "doc": "ListAllAlert Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ListAllCatalogue",
+          "method": "POST",
+          "doc": "ListAllCatalogue Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "GetScreen",
+          "method": "POST",
+          "doc": "GetScreen Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "GetTheme",
+          "method": "POST",
+          "doc": "GetTheme Documentation",
+          "inputs": ["data"]
+        }
+      ]
+    },
+    {
+      "className": "Agent",
+      "attributes": {
+        "self.agent_id": "",
+        "self.agent_type": "",
+        "self.props": ""
+      },
+      "methods": [
+        {
+          "name": "JoinPoll",
+          "method": "POST",
+          "doc": "JoinPoll Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ListAllContact",
+          "method": "POST",
+          "doc": "ListAllContact Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ListContactDetail",
+          "method": "POST",
+          "doc": "ListContactDetail Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "CreateContact",
+          "method": "POST",
+          "doc": "CreateContact Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "EditContact",
+          "method": "POST",
+          "doc": "EditContact Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ListAllOpportunity",
+          "method": "POST",
+          "doc": "ListAllOpportunity Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ListOpportunityDetail",
+          "method": "POST",
+          "doc": "ListOpportunityDetail Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "CreateOpportunity",
+          "method": "POST",
+          "doc": "CreateOpportunity Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "EditOpportunity",
+          "method": "POST",
+          "doc": "EditOpportunity Documentation",
+          "inputs": ["data"]
+        }
+      ]
+    },
+    {
+      "className": "ExpDeveloper",
+      "attributes": {
+        "self.expDev_id": "",
+        "self.expDev_type": "",
+        "self.props": ""
+      },
+      "methods": [
+        {
+          "name": "ListAllMedia",
+          "method": "POST",
+          "doc": "ListAllMedia Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ListMediaDetail",
+          "method": "POST",
+          "doc": "ListMediaDetail Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "CreateMedia",
+          "method": "POST",
+          "doc": "CreateMedia Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "EditMedia",
+          "method": "POST",
+          "doc": "EditMedia Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ListAllCatalogue",
+          "method": "POST",
+          "doc": "ListAllCatalogue Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ListCatalogueDetail",
+          "method": "POST",
+          "doc": "ListCatalogueDetail Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "CreateCatalogue",
+          "method": "POST",
+          "doc": "CreateCatalogue Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "EditCatalogue",
+          "method": "POST",
+          "doc": "EditCatalogue Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ListAllTour",
+          "method": "POST",
+          "doc": "ListAllTour Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ListTourDetail",
+          "method": "POST",
+          "doc": "ListTourDetail Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "CreateTour",
+          "method": "POST",
+          "doc": "CreateTour Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "EditTour",
+          "method": "POST",
+          "doc": "EditTour Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ListAllPoll",
+          "method": "POST",
+          "doc": "ListAllPoll Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ListPollDetail",
+          "method": "POST",
+          "doc": "ListPollDetail Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "CreatePoll",
+          "method": "POST",
+          "doc": "CreatePoll Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "EditPoll",
+          "method": "POST",
+          "doc": "EditPoll Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ListAllSupplier",
+          "method": "POST",
+          "doc": "ListAllSupplier Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ListSupplierDetail",
+          "method": "POST",
+          "doc": "ListSupplierDetail Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "CreateSupplier",
+          "method": "POST",
+          "doc": "CreateSupplier Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "EditSupplier",
+          "method": "POST",
+          "doc": "EditSupplier Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ListAllExperience",
+          "method": "POST",
+          "doc": "ListAllExperience Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ListExperienceDetail",
+          "method": "POST",
+          "doc": "ListExperienceDetail Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "CreateExperience",
+          "method": "POST",
+          "doc": "CreateExperience Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "EditExperience",
+          "method": "POST",
+          "doc": "EditExperience Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ListAllDestiny",
+          "method": "POST",
+          "doc": "ListAllDestiny Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ListDestinyDetail",
+          "method": "POST",
+          "doc": "ListDestinyDetail Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "CreateDestiny",
+          "method": "POST",
+          "doc": "CreateDestiny Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "EditDestiny",
+          "method": "POST",
+          "doc": "EditDestiny Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ListAllActivity",
+          "method": "POST",
+          "doc": "ListAllActivity Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ListActivityDetail",
+          "method": "POST",
+          "doc": "ListActivityDetail Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "CreateActivity",
+          "method": "POST",
+          "doc": "CreateActivity Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "EditActivity",
+          "method": "POST",
+          "doc": "EditActivity Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ListAllService",
+          "method": "POST",
+          "doc": "ListAllService Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ListServiceDetail",
+          "method": "POST",
+          "doc": "ListServiceDetail Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "CreateService",
+          "method": "POST",
+          "doc": "CreateService Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "EditService",
+          "method": "POST",
+          "doc": "EditService Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ListAllProduct",
+          "method": "POST",
+          "doc": "ListAllProduct Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ListProductDetail",
+          "method": "POST",
+          "doc": "ListProductDetail Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "CreateProduct",
+          "method": "POST",
+          "doc": "CreateProduct Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "EditProduct",
+          "method": "POST",
+          "doc": "EditProduct Documentation",
+          "inputs": ["data"]
+        }
+      ]
+    },
+    {
+      "className": "TrvExp",
+      "attributes": {
+        "self.trvExp_id": "",
+        "self.trvExp_type": "",
+        "self.props": ""
+      },
+      "methods": [
+        {
+          "name": "ListAllOpportunity",
+          "method": "POST",
+          "doc": "ListAllOpportunity Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ListOpportunityDetail",
+          "method": "POST",
+          "doc": "ListOpportunityDetail Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "CreateOpportunity",
+          "method": "POST",
+          "doc": "CreateOpportunity Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "EditOpportunity",
+          "method": "POST",
+          "doc": "EditOpportunity Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "PromoteContact",
+          "method": "POST",
+          "doc": "PromoteContact Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "PromoteTour",
+          "method": "POST",
+          "doc": "PromoteTour Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "PromoteOpportunity",
+          "method": "POST",
+          "doc": "PromoteOpportunity Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "PromoteSale",
+          "method": "POST",
+          "doc": "PromoteSale Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ListAllSale",
+          "method": "POST",
+          "doc": "ListAllSale Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ListSaleDetail",
+          "method": "POST",
+          "doc": "ListSaleDetail Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "CreateSale",
+          "method": "POST",
+          "doc": "CreateSale Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "EditSale",
+          "method": "POST",
+          "doc": "EditSale Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ListAllSale",
+          "method": "POST",
+          "doc": "ListAllSale Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ListSaleDetail",
+          "method": "POST",
+          "doc": "ListSaleDetail Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "CreateSale",
+          "method": "POST",
+          "doc": "CreateSale Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "EditSale",
+          "method": "POST",
+          "doc": "EditSale Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ListAllProblem",
+          "method": "POST",
+          "doc": "ListAllProblem Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ListProblemDetail",
+          "method": "POST",
+          "doc": "ListProblemDetail Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "CreateProblem",
+          "method": "POST",
+          "doc": "CreateProblem Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "EditProblem",
+          "method": "POST",
+          "doc": "EditProblem Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ListAllTour",
+          "method": "POST",
+          "doc": "ListAllTour Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ListTourDetail",
+          "method": "POST",
+          "doc": "ListTourDetail Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "CreateTour",
+          "method": "POST",
+          "doc": "CreateTour Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "EditTour",
+          "method": "POST",
+          "doc": "EditTour Documentation",
+          "inputs": ["data"]
+        }
+      ]
+    },
+    {
+      "className": "Admin",
+      "attributes": {
+        "self.admin_id": "",
+        "self.admin_type": "",
+        "self.props": ""
+      },
+      "methods": [
+        {
+          "name": "DeleteSupplier",
+          "method": "POST",
+          "doc": "DeleteSupplier Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "DeleteTour",
+          "method": "POST",
+          "doc": "DeleteTour Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "DeletePoll",
+          "method": "POST",
+          "doc": "DeletePoll Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "DeleteReport",
+          "method": "POST",
+          "doc": "DeleteReport Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "DeleteUser",
+          "method": "POST",
+          "doc": "DeleteUser Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ListAllUser",
+          "method": "POST",
+          "doc": "ListAllUser Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ListUserDetail",
+          "method": "POST",
+          "doc": "ListUserDetail Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "CreateUser",
+          "method": "POST",
+          "doc": "CreateUser Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "EditUser",
+          "method": "POST",
+          "doc": "EditUser Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ListAllReport",
+          "method": "POST",
+          "doc": "ListAllReport Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ListReportDetail",
+          "method": "POST",
+          "doc": "ListReportDetail Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "CreateReport",
+          "method": "POST",
+          "doc": "CreateReport Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "EditReport",
+          "method": "POST",
+          "doc": "EditReport Documentation",
+          "inputs": ["data"]
+        }
+      ]
+    },
+    {
+      "className": "System",
+      "attributes": { 
+          "self.props": "" 
+        },
+      "methods": [
+        {
+          "name": "ValidatePoll",
+          "method": "POST",
+          "doc": "ValidatePoll Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "LogPoll",
+          "method": "POST",
+          "doc": "LogPoll Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ValidateUser",
+          "method": "POST",
+          "doc": "ValidateUser Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "LogUser",
+          "method": "POST",
+          "doc": "LogUser Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ValidateOpportunity",
+          "method": "POST",
+          "doc": "ValidateOpportunity Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "LogOpportunity",
+          "method": "POST",
+          "doc": "LogOpportunity Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ValidateTour",
+          "method": "POST",
+          "doc": "ValidateTour Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "LogTour",
+          "method": "POST",
+          "doc": "LogTour Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ValidateSale",
+          "method": "POST",
+          "doc": "ValidateSale Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "LogSale",
+          "method": "POST",
+          "doc": "LogSale Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ValidatePay",
+          "method": "POST",
+          "doc": "ValidatePay Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "LogPay",
+          "method": "POST",
+          "doc": "LogPay Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ValidateConsumption",
+          "method": "POST",
+          "doc": "ValidateConsumption Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "LogConsumption",
+          "method": "POST",
+          "doc": "LogConsumption Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ValidateContact",
+          "method": "POST",
+          "doc": "ValidateContact Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "LogContact",
+          "method": "POST",
+          "doc": "LogContact Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ValidateProspect",
+          "method": "POST",
+          "doc": "ValidateProspect Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "LogProspect",
+          "method": "POST",
+          "doc": "LogProspect Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ValidateClient",
+          "method": "POST",
+          "doc": "ValidateClient Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "LogClient",
+          "method": "POST",
+          "doc": "LogClient Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ValidateTour",
+          "method": "POST",
+          "doc": "ValidateTour Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "LogTour",
+          "method": "POST",
+          "doc": "LogTour Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ValidateExperience",
+          "method": "POST",
+          "doc": "ValidateExperience Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "LogExperience",
+          "method": "POST",
+          "doc": "LogExperience Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ValidateDestiny",
+          "method": "POST",
+          "doc": "ValidateDestiny Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "LogDestiny",
+          "method": "POST",
+          "doc": "LogDestiny Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ValidateActivity",
+          "method": "POST",
+          "doc": "ValidateActivity Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "LogActivity",
+          "method": "POST",
+          "doc": "LogActivity Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ValidateService",
+          "method": "POST",
+          "doc": "ValidateService Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "LogService",
+          "method": "POST",
+          "doc": "LogService Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ValidateProduct",
+          "method": "POST",
+          "doc": "ValidateProduct Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "LogProduct",
+          "method": "POST",
+          "doc": "LogProduct Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "ValidateProblem",
+          "method": "POST",
+          "doc": "ValidateProblem Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "LogProblem",
+          "method": "POST",
+          "doc": "LogProblem Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "SendSms",
+          "method": "POST",
+          "doc": "SendSms Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "LogSms",
+          "method": "POST",
+          "doc": "LogSms Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "SendEmail",
+          "method": "POST",
+          "doc": "SendEmail Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "LogEmail",
+          "method": "POST",
+          "doc": "LogEmail Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "SendAlert",
+          "method": "POST",
+          "doc": "SendAlert Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "LogAlert",
+          "method": "POST",
+          "doc": "LogAlert Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "SendNotification",
+          "method": "POST",
+          "doc": "SendNotification Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "LogNotification",
+          "method": "POST",
+          "doc": "LogNotification Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "LoadTemplate",
+          "method": "POST",
+          "doc": "LoadTemplate Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "BlockUser",
+          "method": "POST",
+          "doc": "BlockUser Documentation",
+          "inputs": ["data"]
+        },
+        {
+          "name": "LogBlocked",
+          "method": "POST",
+          "doc": "LogBlocked Documentation",
+          "inputs": ["data"]
+        }
+      ]
+    }
+  ]
+}

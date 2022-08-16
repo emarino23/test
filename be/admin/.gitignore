@@ -1,0 +1,8 @@
+.history
+.vscode
+**/*/[bB]in/*
+include
+lib
+lib64
+share
+Scripts

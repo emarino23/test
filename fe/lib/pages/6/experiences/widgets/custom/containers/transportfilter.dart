@@ -1,0 +1,132 @@
+import 'package:flutter/material.dart';
+import 'package:naver_crs/index.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:get/get.dart';
+import 'package:naver_crs/pages/6/experiences/widgets/custom/containers/leftHeader.dart';
+import 'package:naver_crs/pages/6/experiences/widgets/custom/containers/travelchip.dart';
+
+// ignore: must_be_immutable
+class DayExpFilter extends HookWidget {
+  const DayExpFilter({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.only(
+        top: Get.height * 0,
+        left: Get.width * 0.6,
+      ),
+      child: BodyWidget(),
+    );
+  }
+}
+
+// ignore: must_be_immutable
+class BodyWidget extends StatelessWidget {
+  BodyWidget({Key? key}) : super(key: key);
+  final _formKey = GlobalKey<FormState>();
+  @override
+  Widget build(BuildContext context) {
+    formKey = _formKey;
+    return Obx(() {
+      var index = getDestinationIndex(
+          globalDestinationName.value, globalDestinationType.value);
+      Rx<bool> customGuide = Rx(getFormValue(
+          globalctx.memory["destinations"], index, "customGuide", false));
+
+      return Form(
+        key: _formKey,
+        child: Padding(
+          padding: EdgeInsets.only(
+            top: Get.height * 0.055,
+            left: Get.width * 0.08,
+          ),
+          child: SizedBox(
+              width: Get.width * 0.25,
+              height: Get.height,
+              child: Stack(
+                children: [
+                  LeftInfoHeader(
+                      fontSize: 12,
+                      header: LeftHeader(
+                        fontSize: 12,
+                      )),
+                  LeftDayOptions(
+                    customGuide: customGuide,
+                    index: index,
+                  ),
+                ],
+              )),
+        ),
+      );
+    });
+  }
+}
+
+class LeftDayOptions extends StatelessWidget {
+  const LeftDayOptions({
+    Key? key,
+    required this.customGuide,
+    required this.index,
+  }) : super(key: key);
+
+  final Rx<bool> customGuide;
+  final index;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.only(
+        top: Get.height * 0.25,
+        left: Get.width * 0.0,
+      ),
+      child: TravelChips(),
+    );
+  }
+}
+
+class LeftInfoHeader extends StatelessWidget {
+  const LeftInfoHeader({
+    Key? key,
+    required this.header,
+    required this.fontSize,
+  }) : super(key: key);
+  final LeftHeader header;
+  final int fontSize;
+  @override
+  Widget build(BuildContext context) {
+    return Obx(() => Padding(
+          padding:
+              EdgeInsets.only(top: Get.height * 0.01, left: Get.width * 0.0),
+          child: Column(children: [
+            header,
+            CustomTitleWidget(
+                fontWeight: FontWeight.bold,
+                label:
+                    "Current Day: ${dayFormat.format(currentDate.value).replaceAll(" ", "-")}",
+                color: Colors.white,
+                fontSize: fontSize),
+            CustomTitleWidget(
+                fontWeight: FontWeight.bold,
+                label:
+                    "Travel Rhythm: ${findTravelRhythmDescription(parseInt(currentTravelRhythm.value))}",
+                color: Colors.white,
+                fontSize: fontSize),
+            CustomTitleWidget(
+                fontWeight: FontWeight.bold,
+                label:
+                    "Accumulated Hours: ${getTimeStringFromDouble(getRXValue(accumulatedHours, currentDay.value, 0.0))}",
+                color: Colors.white,
+                fontSize: fontSize),
+            CustomTitleWidget(
+                fontWeight: FontWeight.bold,
+                label:
+                    "Left Hours: ${getTimeStringFromDouble(getRXValue(leftHours, currentDay.value, getMaxTrValue(currentTravelRhythm.value)))}",
+                color: Colors.white,
+                fontSize: fontSize),
+          ]),
+        ));
+  }
+}
