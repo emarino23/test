@@ -3,4 +3,4 @@ try:
 except ImportError:
     __path__ = __import__("pkgutil").extend_path(__path__, __name__)
  
-from .web.app import app
+from .web.app.routes import app
