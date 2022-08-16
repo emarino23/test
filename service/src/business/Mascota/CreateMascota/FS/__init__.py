@@ -2,13 +2,13 @@ try:
     __import__('pkg_resources').declare_namespace(__name__)
 except ImportError:
     __path__ = __import__('pkgutil').extend_path(__path__, __name__)
-from ..BSGetMascota import BSGetMascota
+from ..BS import BSCreateMascota
 from naver_core import *
 
-def FSGetMascota(id):
+def FSCreateMascota(input):
     try:
-        
-        result = BSGetMascota(id)
+        data = input.get("data")[0]
+        result = BSCreateMascota(data)
         return Ok(result)
 
     except Exception as e:
