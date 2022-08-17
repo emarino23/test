@@ -1,5 +1,6 @@
 """deps module."""
 try:
+    
     from flask_restx import Resource, reqparse
     from flask import request, render_template, make_response
     from flask import flash,  redirect

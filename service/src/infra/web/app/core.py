@@ -1,7 +1,8 @@
 """core module."""
  
 from .deps import *
-
+from werkzeug.serving import WSGIRequestHandler
+WSGIRequestHandler.protocol_version = "HTTP/1.1"
 
 dotenv_path = Path(ENV_PATH)
 load_dotenv(dotenv_path=dotenv_path)

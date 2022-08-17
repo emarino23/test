@@ -5,7 +5,6 @@ except ImportError:
 from ..DSEditVideo import DSEditVideo
 from naver_core import *
 from src.infra.video.youtube import YoutubeApi
-from src.business.Tour import BSUpdatePlaylist
 
 
 def BSEditVideo(input):
@@ -28,7 +27,6 @@ def BSEditVideo(input):
                 "playlist_slug": playlistId,
                 "tour_id": getValue(input, 'tour_id')
             }
-            res = BSUpdatePlaylist(playlist)
             return playlistId
         if state == 'delete':
             playlistId = getValue(input, 'playlistId')

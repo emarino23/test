@@ -2,9 +2,9 @@ from waitress import serve
 import os
 from naver_core import *
 any_module(__file__, 3)
-from src.infra  import app
 from werkzeug.serving import WSGIRequestHandler
 WSGIRequestHandler.protocol_version = "HTTP/1.1"
+from src.infra  import app
 PORT = int(os.environ.get('SERVER_PORT', '5555'))
 HOST = os.environ.get('SERVER_HOST', '0.0.0.0')
 SERVER = os.environ.get('SERVER', '0.0.0.0')

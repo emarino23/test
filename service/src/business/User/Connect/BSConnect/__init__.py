@@ -8,7 +8,6 @@ try:
     from naver_config import *
     from src.infra.web.app.routes import app
     from src.business.System import ValidateUser, LogConnection, FindCatalog
-    from src.business.Agent import GetExperience
     from src.business.User import SignUp, SignIn, Logout, Reset, UpdateProfile
 except Exception as e:
     print(e)
