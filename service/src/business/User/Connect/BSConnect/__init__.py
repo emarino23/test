@@ -24,7 +24,6 @@ class BS:
         self.SignIn = SignIn()
         self.Reset = Reset
         self.FindCatalog = FindCatalog()
-        self.GetExperience = GetExperience()
         self.ValidateUser = ValidateUser()
         self.UpdateProfile = UpdateProfile
 
